@@ -28,7 +28,7 @@ maven 'm1'
 		}
 		stage('deploy') {
 			steps {
-				echo "ia addin stage in dev1"
+				echo 'ia addin stage in dev1'
 			}
 		}
 }
