@@ -1,15 +1,15 @@
-pipeline{
+pipeline {
 agent any
-tools{
+tools {
 maven 'm1'
 }
     stages {
-        stage('build'){
-            steps{
+        stage('build') {
+            steps {
                     sh 'mvn clean install'
                 }
          }                
-		stage('test'){
+		stage('test') {
 			steps {
 					sh 'mvn test'
 				}
@@ -21,16 +21,15 @@ maven 'm1'
 							}
 					}			
 		}
-		stage('run'){
-			steps{
+		stage('run') {
+			steps {
 				sh 'java -jar /home/pearl/projectmaven/demo2/target/demo1-0.0.1-SNAPSHOT.jar'
 			}
 		}
-		stage('deploy'){
-			steps{
+		stage('deploy') {
+			steps {
 				echo "ia addin stage in dev1"
 			}
 		}
-
 }
 }
