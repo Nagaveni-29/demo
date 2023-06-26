@@ -26,6 +26,11 @@ steps{
     sh 'java -jar /home/pearl/projectmaven/demo2/target/demo1-0.0.1-SNAPSHOT.jar'
 }
 }
+stage('deploy'){
+steps{
+echo " ia addin stage in dev1"
+}
+}
 
 }
 }
