@@ -1,5 +1,7 @@
 pipeline{
-agent any
+agent {
+lable 'sshslave'
+}
 tools{
 maven 'm1'
 }
