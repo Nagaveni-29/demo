@@ -1,6 +1,6 @@
 pipeline{
 agent {
-label 'pwdslave'
+Label 'pwdslave'
 }
 tools{
 maven 'm1'
