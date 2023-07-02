@@ -1,17 +1,15 @@
 pipeline{
-agent {
-Label 'pwdslave'
-}
+agent any
 tools{
 maven 'm1'
 }
 stages {
-stage('build'){
-steps{
+stage('build') {
+steps {
 sh 'mvn clean install'
 }
 }
-stage('test'){
+stage('test') {
     steps {
       sh 'mvn test'
     }
@@ -23,8 +21,8 @@ stage('test'){
       }
     }
 }
-stage('run'){
-steps{
+stage('run') {
+steps {
     sh 'java -jar /home/pearl/projectmaven/demo2/target/demo1-0.0.1-SNAPSHOT.jar'
 }
 }
